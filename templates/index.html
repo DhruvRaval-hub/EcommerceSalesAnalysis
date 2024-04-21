@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profit Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-size: cover;
+            background-position: center;
+            align-items: center;
+            background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            height: 100vh;
+            }
+
+        .container {
+                max-width: 500px;
+                background-color: #fff;
+                border-radius: 50px;
+                padding: 61px;
+                margin: 0 auto; /* Center horizontally */
+                box-shadow: 34px 31px 11px rgba(0, 0, 0, 0.1);
+            }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        select {
+            width: 99.4%; /* Make the select element fill its container */
+            padding: 10px; /* Add some padding inside the select element */
+            font-size: 14px;
+            border: 1px solid #ccc; /* Add a border to the select element */
+            border-radius: 4px; /* Add rounded corners */
+            background-color: #fff; /* Background color */
+        }
+
+        /* Style for option */
+        option {
+            padding: 8px; /* Add some padding inside the option element */
+        }
+        input[type="number"] {
+            width: 91%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <h1>સોદ્દીક સાહેબ ની જય હો</h1> -->
+        <h2>Enter Product's Value</h2>
+        <form method="post" action="/predict">
+            <label for="company">Company</label>
+            <select id="company" name="company" required>
+                <option value="Acer">Acer</option>
+                <option value="Apple">Apple</option>
+                <option value="Crucial">Crucial</option>
+                <option value="Cursor">Cursor</option>
+                <option value="Display">Display</option>
+                <option value="EcoTank">EcoTank</option>
+                <option value="Epson">Epson</option>
+                <option value="Google">Google</option>
+                <option value="Hikvision">Hikvision</option>
+                <option value="HP">HP</option>
+                <option value="Infinix">Infinix</option>
+                <option value="iTel">iTel</option>
+                <option value="Lexar">Lexar</option>
+                <option value="LG">LG</option>
+                <option value="Mi">Mi</option>
+                <option value="Nokia">Nokia</option>
+                <option value="Oppo">Oppo</option>
+                <option value="One plus">One plus</option>
+                <option value="Realme">Realme</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Sony">Sony</option>
+                <option value="Test">Test</option>
+                <option value="Toshiba">Toshiba</option>
+                <option value="Transcend">Transcend</option>
+                <option value="Vison Plus">Vison Plus</option>
+                <option value="Vivo">Vivo</option>
+                <option value="Von">Von</option>
+                <option value="Xiaomi">Xiaomi</option>
+            </select><br><br>
+            <label for="input1">Order Amount</label>
+            <input type="number" id="input1" name="input1" required><br><br>
+            <label for="input2">Item Cost</label>
+            <input type="number" id="input2" name="input2" required><br><br>
+            <label for="input3">Quantity</label>
+            <input type="number" id="input3" name="input3" required><br><br>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
